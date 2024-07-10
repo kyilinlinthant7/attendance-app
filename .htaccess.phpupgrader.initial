@@ -1,0 +1,88 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://admin.busybeesmyanmar.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://admin.busybeesmyanmar.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://busybeesmyanmar.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://busybeesmyanmar.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://busybeesmyanmar.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://busybeesmyanmar.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dev.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dev.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://erp.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://erp.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://hr.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://hr.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://mail.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://mail.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.admin.busybeesmyanmar.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.admin.busybeesmyanmar.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.busybeesmyanmar.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.busybeesmyanmar.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.busybeesmyanmar.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.busybeesmyanmar.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dev.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dev.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.erp.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.erp.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.hr.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.hr.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mail.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mail.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://admin.busybeesmyanmar.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://admin.busybeesmyanmar.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://busybeesmyanmar.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://busybeesmyanmar.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://busybeesmyanmar.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://busybeesmyanmar.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dev.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dev.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://erp.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://erp.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://hr.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://hr.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://mail.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://mail.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.admin.busybeesmyanmar.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.admin.busybeesmyanmar.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.busybeesmyanmar.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.busybeesmyanmar.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.busybeesmyanmar.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.busybeesmyanmar.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dev.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dev.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.erp.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.erp.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.hr.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.hr.busybeesexpertservice.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.mail.busybeesexpertservice.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.mail.busybeesexpertservice.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|bmp|png)$ - [F,NC]
