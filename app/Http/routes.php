@@ -24,10 +24,11 @@ Route::group(['middleware' => ['guest']], function ()
 
 //Applicatioin
 Route::get('leader-login', 'Login\LoginController@showLoginForm');
-Route::get('leader-check-list','Login\LoginController@login');
-// Route::post('leader-changepassword','Login\LoginController@changePassword');
-Route::get('leader-home','Login\LoginController@loginCheck');
-Route::get('leader-other-home-page/{$userId}','Leader\ListController@otherLink')->name('get.leader.other');
+Route::get('leader-check-list', 'Login\LoginController@login');
+// Route::post('leader-changepassword', 'Login\LoginController@changePassword');
+// Route::get('leader-home', 'Login\LoginController@loginCheck')->name('get.leader.home');
+Route::get('/leader/home/{userId}', 'Login\LoginController@loginCheck')->name('get.leader.home');
+Route::get('/leader/other/{userId}', 'Leader\ListController@otherLink')->name('get.leader.other');
 // Route::get('home/{$userId}/{$siteId}/{$shiftId}','List\ListController@homePage');
 Route::get('/get-leader-shifts/{siteId}', 'Leader\ListController@getShifts')->name('get.leader.shifts');
 

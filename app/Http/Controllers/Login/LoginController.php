@@ -110,6 +110,7 @@ class LoginController extends Controller {
                                         'site_id' => $sites_id,
                                     ]
                                 ];
+                                
                                 return view('leader.login_select_site', compact('name', 'sites_id', 'emp_id')); 
             
                             } else {
@@ -131,7 +132,7 @@ class LoginController extends Controller {
         }
     }
 
-    public function loginCheck(Request $request)
+    public function loginCheck(Request $request, $userId)
     {
         $userId = $request->user_id;
         $site = $request->site;

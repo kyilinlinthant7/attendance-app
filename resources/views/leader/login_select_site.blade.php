@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="text-center">
-                    <form action="{{ url('/leader-home') }}" method="get" style="margin-top:50px;">
+                    <form action="{{ route('get.leader.home', [$emp_id]) }}" method="get" style="margin-top: 50px;">
                         <input type="hidden" name="user_id" value="{{ $emp_id }}">
                         <input type="hidden" name="user_name" value="{{ $name }}">
                         <div class="panel-body pn mv10">

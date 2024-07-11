@@ -82,6 +82,9 @@
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
         }
+        .text-light {
+            color: white;
+        }
         .header {
             background-image: url('/../../../assets/img/icons/header.png');
             background-position: center;
@@ -143,14 +146,14 @@
     <div class="header" style="padding-top: 12px;">
         <div class="col-xs-8">
             <p>Welcome!</p>
-            <h1>{{ $username }}</h1>
+            <h1 class="text-light">{{ $username }}</h1>
             <p>{{ $empId }}</p>
         </div>
         <div class="col-xs-4 text-right">
             <img src="/../../../assets/img/icons/cp.png" id="logo">
         </div>
         <div class="col-xs-12 text-center" style="padding-top: 30px;">
-            <h2>{{Carbon\Carbon::now()->format('l, d-m-Y')}}</h2>
+            <h2 class="text-light">{{Carbon\Carbon::now()->format('l, d-m-Y')}}</h2>
         </div>
     </div>
     <!-- -------------- Body Wrap  -------------- -->
@@ -207,14 +210,14 @@
 
     <div class="footer text-center">
         <div class="col-xs-6 footer-div">
-            <a href="{{ url('leader-home') }}" class="link">
+            <a href="" class="link">
                 <i class="fa fa-home" aria-hidden="true"></i>
                 <br>
                 <span>Home</span>
             </a>
         </div>
         <div class="col-xs-6 footer-div">
-            <a href="{{ route('get.leader.other', ['userId' => $userId]) }}" class="link">
+            <a href="{{ route('get.leader.other', $userId) }}" class="link">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <br>
                 <span>Other</span>

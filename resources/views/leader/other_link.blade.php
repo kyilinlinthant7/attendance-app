@@ -28,39 +28,13 @@
         *{
             font-family: 'Roboto', sans-serif;
         }
-          
-        .clock { 
-            color: #000;
-            font-size: 56px;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-            height: 0.5em;
-            background-color: gray;
-        }
-                        
-        .bg {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 0.8em;
-            height: 0.8em;
-            background: white;
-            position: relative;
-            border-radius: 20%;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
-            padding-top: 5px;
+
+        .text-dark {
+            color: #343434;
         }
 
-        .fa {
+        .footer-icon {
             font-size: 25px;
-            margin-top: -30px;
         }
 
         .link {
@@ -71,9 +45,10 @@
         body {
             height: 100vh;
         }
+
         #main1 {
             max-width: 100%;
-            height: 67%;
+            height: 84%;
             background-image: url('/../../../assets/img/icons/bg.jpg');
             background-position: center;
             background-repeat: no-repeat;
@@ -90,15 +65,16 @@
             background-attachment: fixed;
             background-color: rgba(0, 0, 0, 0.5);
             color: white;
-            height: 25%;
+            height: 8%;
         }
         #logo {
-            width: 80%;
-            height: 80%;
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
         }
         .footer-div {
-            margin-top: -7px;
+            padding-top: 10px;
         }
         .footer {
             background-image: url('/../../../assets/img/icons/footer.png');
@@ -106,7 +82,6 @@
             color: white !important;
         }
         #timebar {
-            /* background-color: magenta; */
             height: 20%;
         }
         .grid {
@@ -134,41 +109,155 @@
             padding: 10px 10px 10px 15px;
         }
         .p-bold {
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 14px;
+        }
+        #editBtn {
+            border: 1px solid lightseagreen;
+            border-radius: 20px;
+            width: 50%;
+        }
+        .btn-div {
+            width: 90%;
+            height: 40px;
+            margin: auto;
+            padding: 10px;
+            background: seagreen;
+            border-radius: 10px;
+            /* padding-top: 13px; */
+            margin-top: 10px;
+        }
+        .icon {
+            font-size: 20px;
         }
     </style>
 </head>
 <body class="utility-page sb-l-c sb-r-c">
     <div class="header" style="padding-top: 12px;">
-        <div class="col-xs-8">
-            <p>Welcome!</p>
-        </div>
-        <div class="col-xs-4 text-right">
-            <img src="/../../../assets/img/icons/cp.png" id="logo">
-        </div>
-        <div class="col-xs-12 text-center" style="padding-top: 30px;">
-            <h2>{{Carbon\Carbon::now()->format('l, d-m-Y')}}</h2>
+        <div class="col-xs-12 text-center">
+            <h4 style="color: white;">Profile</h4>
         </div>
     </div>
+
     <!-- -------------- Body Wrap  -------------- -->
     <div id="main1">
-
+        <div class="text-center" style="margin-bottom: 20px;">
+            <img src="/../../../assets/img/icons/profile.jpg" id="logo">
+            <h4 class="text-dark">{{ $user->name }}</h4>
+            <p style="color: gray">{{ $user->employee_id }}</p>
+            <a class="btn" id="editBtn">Edit Profile</a>
+        </div>
         
+        <div>
+            <div class="btn-div">
+                <div class="col-xs-2">
+                    <i class="fa fa-info-circle icon"></i> 
+                </div>
+                <div class="col-xs-8">
+                    <span class="p-bold btn-text">Clean Pro အကြောင်း</span>
+                </div>
+                <div class="col-xs-2">
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <div class="col-xs-2">
+                    <i class="fa fa-info-circle icon"></i> 
+                </div>
+                <div class="col-xs-8">
+                    <span class="p-bold btn-text">Clean Pro အကြောင်း</span>
+                </div>
+                <div class="col-xs-2">
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <div class="col-xs-2">
+                    <i class="fa fa-info-circle icon"></i> 
+                </div>
+                <div class="col-xs-8">
+                    <span class="p-bold btn-text">Clean Pro အကြောင်း</span>
+                </div>
+                <div class="col-xs-2">
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <div class="col-xs-2">
+                    <i class="fa fa-info-circle icon"></i> 
+                </div>
+                <div class="col-xs-8">
+                    <span class="p-bold btn-text">Clean Pro အကြောင်း</span>
+                </div>
+                <div class="col-xs-2">
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <div class="col-xs-2">
+                    <i class="fa fa-info-circle icon"></i> 
+                </div>
+                <div class="col-xs-8">
+                    <span class="p-bold btn-text">Clean Pro အကြောင်း</span>
+                </div>
+                <div class="col-xs-2">
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <div class="col-xs-2">
+                    <i class="fa fa-info-circle icon"></i> 
+                </div>
+                <div class="col-xs-8">
+                    <span class="p-bold btn-text">Clean Pro အကြောင်း</span>
+                </div>
+                <div class="col-xs-2">
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <div class="col-xs-2">
+                    <i class="fa fa-info-circle icon"></i> 
+                </div>
+                <div class="col-xs-8">
+                    <span class="p-bold btn-text">Clean Pro အကြောင်း</span>
+                </div>
+                <div class="col-xs-2">
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="btn-div">
+                <div class="col-xs-2">
+                    <i class="fa fa-info-circle icon"></i> 
+                </div>
+                <div class="col-xs-8">
+                    <span class="p-bold btn-text">Clean Pro အကြောင်း</span>
+                </div>
+                <div class="col-xs-2">
+                    <i class="fa fa-chevron-right icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- -------------- /Body Wrap  -------------- -->
 
     <div class="footer text-center">
         <div class="col-xs-6 footer-div">
-            <a href="{{ url('leader-home') }}" class="link">
-                <i class="fa fa-home" aria-hidden="true"></i>
+            <a href="{{ route('get.leader.home', [$userId]) }}" class="link">
+                <i class="fa fa-home footer-icon" aria-hidden="true"></i>
                 <br>
                 <span>Home</span>
             </a>
         </div>
         <div class="col-xs-6 footer-div">
-            <a href="{{ url('leader-other') }}" class="link">
-                <i class="fa fa-user" aria-hidden="true"></i>
+            <a href="" class="link">
+                <i class="fa fa-user footer-icon" aria-hidden="true"></i>
                 <br>
                 <span>Other</span>
             </a>

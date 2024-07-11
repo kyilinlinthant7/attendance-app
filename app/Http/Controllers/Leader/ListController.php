@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Leader;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Employee;
 
 class ListController extends Controller
 {
@@ -19,6 +20,8 @@ class ListController extends Controller
 
     public function otherLink($userId)
     {
-        return view('leader.other_link');
+        $user = Employee::find($userId);
+
+        return view('leader.other_link', compact('user', 'userId'));
     }
 }
